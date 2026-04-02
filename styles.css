@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #b2a18b;
+  min-height: 100vh;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+}
+
+h1 {
+  font-size: 72px;
+  color: #000;
+  margin-bottom: 28px;
+  font-weight: 700;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  width: 60vmin;
+  height: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.8vmin;
+}
+
+.box {
+  width: 18.5vmin;
+  height: 18.5vmin;
+  border: none;
+  border-radius: 28px;
+  background: #b9b692;
+  color: #7e2b2b;
+  font-size: 64px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.box:disabled {
+  cursor: not-allowed;
+}
+
+#reset-btn,
+#new-btn {
+  border: none;
+  border-radius: 22px;
+  background: #dd7474;
+  color: #000;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 14px 28px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+#reset-btn {
+  margin-top: 26px;
+}
+
+#new-btn {
+  margin-top: 18px;
+}
+
+/* popup overlay */
+.msg-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.hide {
+  display: none;
+}
+
+/* popup box */
+.popup-box {
+  min-width: 480px;
+  max-width: 88%;
+  padding: 18px 26px 22px;
+  border-radius: 34px;
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+}
+
+/* winner popup */
+.popup-box.winner-style {
+  background: #f0f3ef;
+}
+
+.popup-box.winner-style #msg {
+  color: #56a17c;
+}
+
+/* draw popup */
+.popup-box.draw-style {
+  background: #f0c40f;
+}
+
+.popup-box.draw-style #msg {
+  color: #3b4349;
+}
+
+#msg {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  .game {
+    width: 92vmin;
+    height: 92vmin;
+    gap: 2vmin;
+  }
+
+  .box {
+    width: 28vmin;
+    height: 28vmin;
+    font-size: 50px;
+    border-radius: 22px;
+  }
+
+  .popup-box {
+    min-width: 0;
+    width: 78%;
+    padding: 16px 18px 18px;
+    border-radius: 24px;
+  }
+
+  #msg {
+    font-size: 22px;
+  }
+
+  #reset-btn,
+  #new-btn {
+    font-size: 18px;
+    padding: 12px 22px;
+    border-radius: 18px;
+  }
+
+  #reset-btn {
+    margin-top: 22px;
+  }
+}
