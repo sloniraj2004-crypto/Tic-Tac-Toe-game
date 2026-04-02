@@ -24,7 +24,5 @@ Play with your friend and enjoy the classic game with a clean UI.
 
 ---
 
-## Screenshot 
-
-
 ## live Demo
+https://sloniraj2004-crypto.github.io/Tic-Tac-Toe-game/
